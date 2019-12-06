@@ -1,0 +1,8 @@
+version: '0'
+services:
+  instrumented-tomcat:
+    build: .
+    ports:
+      - "8888:8080"
+    environment:
+      CATALINA_OPTS: '-javaagent:/var/tmp/header-agent.jar'
